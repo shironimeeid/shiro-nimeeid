@@ -1,0 +1,9 @@
+BeautifulSoup4==4.11.1
+Django==4.0.4
+requests==2.27.1
+
+run ngrok
+py manage.py runserver localhost:8000
+
+run normal 
+py manage.py
