@@ -2,7 +2,10 @@ import json
 import urllib
 import tools
 from bs4 import BeautifulSoup
-baseURL = "https://komikindo.id/"
+import config as url
+import re
+
+baseURL = url.KOMIKINDO_BASEURL
 prox = "https://komikindo-id.translate.goog/"
 proxq = "?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=id"
 
@@ -112,7 +115,7 @@ def daftar_komik(request, page):
     return obj
 
 def komik_terbaru(request, page):
-    response = tools.get(baseURL + 'daftar-komik/page' + str(page))
+    response = tools.get(baseURL + 'komik-terbaru/page/' + str(page))
     data = response.text.replace(prox, baseURL).replace(proxq, "")
     soup = BeautifulSoup(data, 'html.parser')
     
@@ -206,11 +209,11 @@ def komik_detail(request, endpoint):
     manga = soup.find(class_="postbody")
     obj["title"] = manga.find(class_="entry-title").text.replace("Komik ","")
     obj["thumb"] = manga.find(class_="thumb").find("img").get("src").split("?")[0]
-    obj["alter"] = manga.find(class_="spe").find_all("span")[0].text.split(": ")[1].split(", ")
-    obj["status"] = manga.find(class_="spe").find_all("span")[1].text.split(": ")[1]
-    obj["author"] = manga.find(class_="spe").find_all("span")[2].text.split(": ")[1]
-    obj["illustator"] = manga.find(class_="spe").find_all("span")[3].text.split(": ")[1]
-    obj["grafis"] = manga.find(class_="spe").find_all("span")[4].text.split(": ")[1]
+    obj["alter"] = manga.find(class_="spe").find_all("span")[0].text.split(":")[1].split(", ")
+    obj["status"] = manga.find(class_="spe").find_all("span")[1].text.split(':')[1]
+    obj["author"] = manga.find(class_="spe").find_all("span")[2].text.split(":")[1]
+    obj["illustator"] = manga.find(class_="spe").find_all("span")[3].text.split(":")[1]
+    obj["grafis"] = manga.find(class_="spe").find_all("span")[4].text.split(":")[1]
     obj["score"] = manga.find(itemprop="ratingValue").text
     
     obj["genres"] = []
@@ -238,7 +241,6 @@ def komik_detail(request, endpoint):
         link = { 'url': url, 'endpoint': endpoint }
         obj["chapters"].append({ 'name': name, 'link': link })
         
-    
     return obj
 
 def search(request, query):

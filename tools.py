@@ -19,7 +19,7 @@ def get(url, options={}):
         return { 'success': False, 'statusCode': 404, 'message': "Not Found" }
     else:
         url_base64 = base64.b64encode(url.encode('utf-8'))
-        response = req.get("https://bypass.kato-rest.us/?q=" + url_base64.decode('utf-8'))
+        response = req.get("https://bypass.katowproject.my.id/?q=" + url_base64.decode('utf-8'))
         # if "komikindo" in url:
         #     # url = url.replace("komikindo.id", "komikindo-id.translate.goog")
         #     # if "?" in url:
@@ -43,16 +43,14 @@ def get(url, options={}):
 def post(url, data, options={}):
     response = req.post(url, data=data, headers=options.get("headers", {}))
     status = response.status_code
-    if status == 200:
+    if '2' in str(status):
         return response
-    else:
-        url_base64 = base64.b64encode(url.encode('utf-8'))
-        # add to data
-        data = data + f"&url={url_base64.decode('utf-8')}"
-        print(data)
-        response = req.post("https://bypass.kato-rest.us/", data=data, headers=options.get("headers", {}))
+        # url_base64 = base64.b64encode(url.encode('utf-8'))
+        # # add to data
+        # data = data + f"&url={url_base64.decode('utf-8')}"
+        # response = req.post("https://bypass.kato-rest.us/", data=data, headers=options.get("headers", {}))
         
-        return response
+        # return response
     
     
 def get_media_src(url):
@@ -90,10 +88,3 @@ def decode_base64(url):
     url = base64.b64decode(url).decode('utf-8')
     
     return url
-
-    
-
-def decode_base64(url):
-    url = base64.b64decode(url).decode('utf-8')
-
-    return url.decode('utf-8')

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
@@ -7,18 +8,18 @@
 <html>
 
 <head>
-	{% block title %}<title>Home · ShiroNime-id</title>{% endblock %}
+	{% block title %}<title>Home · ShiroNimee-ID</title>{% endblock %}
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:site_name" content="Komikato">
+    <meta property="og:site_name" content="shironime">
     <meta property="og:locale" content="id_ID" />
 	<meta property="og:type" content="website" />
     {% block property %}
-	<meta property="og:title" content="Homepage · shironimeeid" />
-	<meta property="og:description" content="shironimee, Animanga read and watch" />
+	<meta property="og:title" content="Homepage · ShiroNimee" />
+	<meta property="og:description" content="shironimee-id, Animanga read and watch" />
 	<meta property="og:url" content="https://komi.kato-rest.us/" />
-    <meta property="og:site_name" content="Komikato" />
+    <meta property="og:site_name" content="shironimee.id" />
     <meta property="og:image" content="/assets/image/kato.png" />
     <meta property="og:image:secure_url" content="/assets/image/kato.png" />
     <meta property="og:image:alt" content="Komikato" />
@@ -29,7 +30,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.12/plyr.min.css"/>
-	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href= {% static "css/main.css" %}/>
 	<link rel="stylesheet" href="/assets/css/default.css" />
 	<link rel="icon" href="/assets/image/kato.png" type="image/png">
 </head>
@@ -42,9 +43,9 @@
             <div class="inner">
 				<!-- Header -->
 				<header id="header">
-					<a href="/" class="logo"><strong>ShiroNime-id</strong></a>
+					<a href="/" class="logo"><strong>shironimee</strong></a>
 					<ul class="icons">
-						<li><a href="//twitter.com/Shiro05526833" class="icon brands fa-twitter"><span class="label">twitter</span></a></li>
+						<li><a href="//instagram.com/sora.azami" class="icon brands fa-instagram"><span class="label">instagram</span></a></li>
 					</ul>
 				</header>
                 

@@ -254,18 +254,19 @@ a {
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
-  color: #6af5e3;
+  color: #00ffdd;
   text-decoration: none;
 }
 
 a:hover {
-  border-bottom-color: #6af5e3;
-  color: #6af5e3 !important;
+  border-bottom-color: #00ffdd;
+  color: #00ffdd !important;
 }
 
 a:hover strong {
   color: inherit;
 }
+
 
 strong,
 b {
@@ -1893,7 +1894,7 @@ header p {
 }
 
 header.major> :last-child {
-  border-bottom: solid 3px #6af5e3;
+  border-bottom: solid 3px #00ffdd;
   display: inline-block;
   margin: 0 0 2em 0;
   padding: 0 0.75em 0.5em 0;
@@ -1959,8 +1960,8 @@ input[type="search"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #6af5e3;
-  box-shadow: 0 0 0 1px #6af5e3;
+  border-color: #00ffdd;
+  box-shadow: 0 0 0 1px #00ffdd;
 }
 
 select {
@@ -2068,8 +2069,8 @@ input[type="radio"]:checked+label:before {
 
 input[type="checkbox"]:focus+label:before,
 input[type="radio"]:focus+label:before {
-  border-color: #6af5e3;
-  box-shadow: 0 0 0 1px #6af5e3;
+  border-color: #00ffdd;
+  box-shadow: 0 0 0 1px #00ffdd;
 }
 
 input[type="checkbox"]+label:before {
@@ -2412,7 +2413,7 @@ ul.contact li:before {
 }
 
 ul.contact li:before {
-  color: #6af5e3;
+  color: #00ffdd;
   display: inline-block;
   font-size: 1.5em;
   height: 1.125em;
@@ -2470,16 +2471,16 @@ ul.pagination li>.page {
 }
 
 ul.pagination li>.page.active {
-  background-color: #6af5e3;
+  background-color: #00ffdd;
   color: #ffffff !important;
 }
 
 ul.pagination li>.page.active:hover {
-  background-color: #6af5e3;
+  background-color: #00ffdd;
 }
 
 ul.pagination li>.page.active:active {
-  background-color: #6af5e3;
+  background-color: #00ffdd;
 }
 
 ul.pagination li:first-child {
@@ -2580,8 +2581,8 @@ button,
   background-color: transparent;
   border-radius: 0.375em;
   border: 0;
-  box-shadow: inset 0 0 0 2px #6af5e3;
-  color: #6af5e3 !important;
+  box-shadow: inset 0 0 0 2px #00ffdd;
+  color: #00ffdd !important;
   cursor: pointer;
   display: inline-block;
   font-family: "Roboto Slab", serif;
@@ -2652,7 +2653,7 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-  background-color: #6af5e3;
+  background-color: #00ffdd;
   box-shadow: none;
   color: #ffffff !important;
 }
@@ -2662,7 +2663,7 @@ input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-  background-color: #6af5e3;
+  background-color: #00ffdd;
 }
 
 input[type="submit"].primary:active,
@@ -2670,7 +2671,7 @@ input[type="reset"].primary:active,
 input[type="button"].primary:active,
 button.primary:active,
 .button.primary:active {
-  background-color: #6af5e3;
+  background-color: #00ffdd;
 }
 
 input[type="submit"].disabled,
@@ -2769,7 +2770,7 @@ button:disabled,
 }
 
 .features article .icon:before {
-  color: #6af5e3;
+  color: #00ffdd;
   font-size: 2.75rem;
   position: relative;
   top: 0.05em;
@@ -3408,7 +3409,7 @@ button:disabled,
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  border-bottom: solid 5px #6af5e3;
+  border-bottom: solid 5px #00ffdd;
   padding: 6em 0 1em 0;
   position: relative;
 }
@@ -3594,7 +3595,7 @@ button:disabled,
 
 #menu ul a:hover,
 #menu ul span:hover {
-  color: #6af5e3;
+  color: #00ffdd;
 }
 
 #menu ul a.opener,
@@ -3636,7 +3637,7 @@ button:disabled,
 
 #menu ul a.opener:hover:before,
 #menu ul span.opener:hover:before {
-  color: #6af5e3;
+  color: #00ffdd;
 }
 
 #menu ul a.opener.active+ul,

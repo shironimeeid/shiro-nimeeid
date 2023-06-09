@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.staticfiles',
-    'komikato'
+    'shironime'
 ]
 
 MIDDLEWARE = [
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'komikato.urls'
+ROOT_URLCONF = 'shironime.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'komikato.wsgi.application'
+WSGI_APPLICATION = 'shironime.wsgi.application'
 
 
 # Database
@@ -99,9 +99,7 @@ STATIC_URL = "assets/"
 if DEBUG is False:
     STATIC_ROOT = os.path.join(BASE_DIR, "static")
 else:
-    STATICFILES_DIRS = [
-        BASE_DIR / "static",
-    ]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

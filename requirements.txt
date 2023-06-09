@@ -7,3 +7,6 @@ py manage.py runserver localhost:8000
 
 run normal 
 py manage.py
+
+warna utama
+6af5e3
